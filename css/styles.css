@@ -15,6 +15,8 @@
     --white-bg-color:#FFFFFF;
     --dark-bg-color:#2F303A;
     --secondary-bg-color: #F5F4FA;
+    --hero-section-bg-color: #C4C4C4;
+    --linear-gradient: rgba(47, 48, 58, 0.4);
     
     /* others */
     --hero-btn-hover-color: #188CE8;
@@ -186,10 +188,21 @@ body {
 
 /* Hero section */
 .hero {
-    background-color: var(--dark-bg-color);
+    background-color: var(--hero-section-bg-color);
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient(0deg, var(--linear-gradient), var(--linear-gradient)), url(../images/hero-bcg-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
+
 
 .main-title {
     width: 696px;
@@ -294,7 +307,9 @@ body {
 
 .team-list-item {
     background-color: var(--white-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
 }
 
 .team-card-name {
@@ -317,6 +332,17 @@ body {
     color: var(--secondary-txt-color);
 }
 
+/* clients-section */
+
+.clients-section-title {
+    color: var(--main-txt-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+
 /* footer */
 .footer {
     padding-top: 60px;
@@ -335,6 +361,8 @@ body {
 }
 
 .footer-address {
+    display: flex;
+    align-items: baseline;
     font-style: inherit;
 }
 
@@ -362,6 +390,20 @@ body {
     color: var(--acent-txt-color);
 }
 
+.social-link-container {
+    margin-left: 70px;
+}
+
+.footer-link-text {
+    color: var(--white-txt-color);
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+
+}
+
 /* Portfolio sections */
 .portfolio-btns-list {
     display: flex;
@@ -372,7 +414,6 @@ body {
 .btn-list-item:not(:last-child) {
     margin-right: 8px;
 }
-
 
 .portfolio-btn {
     padding: 6px 22px;
@@ -390,6 +431,7 @@ body {
 .portfolio-btn:focus {
     color: var(--white-txt-color);
     background-color: var(--acent-txt-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     cursor: pointer;
 }
 
@@ -413,6 +455,15 @@ body {
     font-size: 16px;
     line-height: 1.9;
     color: var(--secondary-txt-color);
+}
+
+.portfolio-link {
+    display: block;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 
